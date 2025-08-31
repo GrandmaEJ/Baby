@@ -1,9 +1,9 @@
 use axum::Router;
 use sqlx::SqlitePool;
 
-mod baby;
-mod teach;
-mod download_db;
+use crate::baby;
+use crate::teach;
+use crate::download_db;
 
 pub fn create_router(pool: SqlitePool, db_password: String) -> Router {
     use axum::Extension;

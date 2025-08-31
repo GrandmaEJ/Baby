@@ -9,7 +9,7 @@ pub struct Config {
 impl Config {
     pub fn from_env() -> Self {
         dotenv().ok();
-        let db_password = env::var("DB_PASSWORD").expect("DB_PASSWORD must be set");
+        let db_password = std::env::var("DB_PASSWORD").unwrap_or_default();
         let port = env::var("PORT")
             .unwrap_or_else(|_| "2832".to_string())
             .parse()
