@@ -189,7 +189,7 @@ DB_PASSWORD=my_secure_password_123
 curl "http://localhost:2832/baby/download?password=my_secure_password_123" --output backup.db
 ```
 
-## 🐛 ত্রুটি হ্যান্লিং
+## 🐛 ত্রুটি Handling
 
 API উপযুক্ত HTTP স্ট্যাটাস কোড প্রদান করে:
 
